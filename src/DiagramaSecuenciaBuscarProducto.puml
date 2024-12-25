@@ -1,0 +1,15 @@
+@startuml
+actor Usuario
+participant "InterfazGraficaProductos" as IGP
+participant "Productos" as P
+participant "Base de Datos" as DB
+
+Usuario -> IGP : Ingresar criterio de búsqueda\n y hacer clic en Buscar
+IGP -> IGP : Capturar criterio de búsqueda
+IGP -> P : buscarProductos(tipo, criterio)
+P -> DB : Obtener productos de la base de datos
+DB --> P : Resultados de la búsqueda
+P --> IGP : Resultados de la búsqueda
+IGP -> Usuario : Mostrar resultados en la tabla
+
+@enduml

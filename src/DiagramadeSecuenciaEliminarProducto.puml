@@ -1,0 +1,15 @@
+@startuml
+actor Usuario
+participant "InterfazGraficaProductos" as IGP
+participant "Productos" as P
+participant "Base de Datos" as DB
+
+Usuario -> IGP : Ingresar datos del producto\n y hacer clic en Eliminar
+IGP -> IGP : Capturar datos del producto
+IGP -> P : eliminarProducto(tipo, nombre)
+P -> DB : Eliminar producto de la base de datos
+DB --> P : Confirmación de eliminación
+P --> IGP : Confirmación de eliminación
+IGP -> Usuario : Mostrar mensaje de producto eliminado
+
+@enduml

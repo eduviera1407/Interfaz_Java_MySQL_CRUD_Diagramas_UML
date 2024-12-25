@@ -1,0 +1,15 @@
+@startuml
+actor Usuario
+participant "InterfazGraficaProductos" as IGP
+participant "Productos" as P
+participant "Base de Datos" as DB
+
+Usuario -> IGP : Ingresar datos de producto\n y hacer clic en Insertar
+IGP -> IGP : Capturar datos del producto
+IGP -> P : insertarProducto(tipo, nombre, marca, precio)
+P -> DB : Guardar producto en la base de datos
+DB --> P : Confirmación de inserción
+P --> IGP : Confirmación de inserción
+IGP -> Usuario : Mostrar mensaje de producto insertado
+
+@enduml

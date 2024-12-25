@@ -1,0 +1,35 @@
+@startuml
+
+actor Usuario
+
+rectangle "Sistema de Gestión de Productos Retro" {
+    usecase "Insertar Producto" as UC2
+    usecase "Buscar Producto" as UC3
+    usecase "Eliminar Producto" as UC4
+    usecase "Insertar Productos desde Archivo" as UC5
+    usecase "Mostrar Resultados" as UC6
+}
+
+database "Base de Datos"  as bd {
+}
+
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+Usuario --> UC5
+
+UC2 --> bd : Guardar producto
+UC2 --> UC6 : Mostrar resultados tras insertar
+
+UC3 -->bd : Obtener productos
+UC3 --> UC6 : Mostrar resultados tras buscar
+
+UC4 --> bd : Eliminar producto
+UC4 --> UC6 : Mostrar resultados tras eliminar
+
+UC5 --> bd : Guardar productos desde archivo
+UC5 --> UC6 : Mostrar resultados tras insertar desde archivo
+
+UC6 --> bd : Obtener productos
+
+@enduml

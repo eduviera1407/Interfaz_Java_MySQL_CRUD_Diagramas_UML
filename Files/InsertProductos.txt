@@ -1,0 +1,19 @@
+Chaqueta Holanda,RetroStyle,89.99
+Chaqueta Francia,RetroStyle,74.99
+Chaqueta Italia,Copa Classic,69.99
+Botas Holanda,RetroStyle,89.99
+Botas España,VintageFashion,79.99
+Botas Alemania,ClassicRetro,94.99
+Camiseta Francia,RetroStyle,74.99
+Camiseta Brasil,VintageFashion,64.99
+Camiseta Argentina,ClassicRetro,79.99
+Chaqueta España,ClassicRetro,79.99
+Botas Brasil,RetroStyle,84.99
+Camiseta Italia,VintageFashion,69.99
+Chaqueta Argentina,VintageFashion,74.99
+Botas Francia,ClassicRetro,89.99
+Camiseta Holanda,RetroStyle,79.99
+Chaqueta Alemania,VintageFashion,69.99
+Botas Italia,Copa Classic,74.99
+Camiseta España,ClassicRetro,74.99
+Botas Argentina,ClassicRetro,84.99

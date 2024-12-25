@@ -1,0 +1,40 @@
+@startuml
+
+class EstiloInterfaz {
+    +aplicarEstilo(componente: Component): void
+}
+
+class InterfazGraficaProductos {
+    -campoNombre: JTextField
+    -campoMarca: JTextField
+    -campoPrecio: JTextField
+    -comboTipo: JComboBox<String>
+    -botonInsertarDesdeArchivo: JButton
+    -botonBuscar: JButton
+    -botonEliminar: JButton
+    -botonInsertar: JButton
+    -tablaResultados: JTable
+    -productos: Productos
+    -panelInsercion: JPanel
+    -panelBusqueda: JPanel
+    +InterfazGraficaProductos()
+    -initUI(): void
+    -initEventHandlers(): void
+    -mostrarResultados(resultados: List<String[]>): void
+    -insertarDesdeArchivo(): void
+    -obtenerConexionDesdePropiedades(): Connection
+    -apariencia(): void
+}
+
+class Productos {
+    +obtenerConexion(): Connection
+    +insertarProducto(tipo: String, nombre: String, marca: String, precio: double): void
+    +buscarProductos(tipo: String, criterio: String): List<String[]>
+    +eliminarProducto(tipo: String, nombre: String): void
+    -obtenerTablaPorTipo(tipo: String): String
+}
+
+InterfazGraficaProductos --> EstiloInterfaz
+InterfazGraficaProductos --> Productos
+
+@enduml
